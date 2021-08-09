@@ -9,7 +9,7 @@ import requests
 import os
 import re
 
-client = docker.DockerClient(base_url='tcp://10.6.203.60:2375')
+client = docker.DockerClient(base_url='tcp://127.0.0.1:2375')
 # client = docker.DockerClient(base_url='unix://var/run/docker.sock')
 app = Flask(__name__)
 
@@ -102,7 +102,7 @@ def push_image():
                                          registry='{curl}'.format(curl=prod_registry_ips[ip_index]))
 
                             """判断镜像空间/镜像文件/镜像版本是否存在，存在返回异常，不存在 push 到指定镜像空间"""
-                            auth = ('jfrog', 'Daocloud@1234')
+                            auth = ('jfrog', 'xxxx@1234')
                             reg_list = requests.get(
                                 'http://{url}/dce/registries/buildin-registry/namespaces'.format(
                                     url=prod_registry_ips[ip_index]), auth=auth).json()
@@ -154,7 +154,7 @@ def push_image():
                                       tag='{img_tag}'.format(img_tag=jfrog_image_tag)):
                         client.login(username='jfrog', password='Daocloud@1234',
                                      registry='{curl}'.format(curl=prod_registry_url))
-                        auth = ('jfrog', 'Daocloud@1234')
+                        auth = ('jfrog', 'xxxx@1234')
                         reg_list = requests.get(
                             'http://{url}/dce/registries/buildin-registry/namespaces'.format(
                                 url=prod_registry_url), auth=auth).json()
