@@ -9,7 +9,7 @@ import requests
 import os
 import re
 
-client = docker.DockerClient(base_url='tcp://10.6.203.60:2375')
+client = docker.DockerClient(base_url='tcp://127.0.0.1:2375')
 # client = docker.DockerClient(base_url='unix://var/run/docker.sock')
 app = Flask(__name__)
 
