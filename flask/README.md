@@ -15,3 +15,8 @@ docker run -itd -p 3002:3002 \
 --name post_api_name \
 192.167.1.10/registry/pushimages:latest
 ```
+3. Dockerfile
+```
+dockerfile_old 为初版基础镜像+python 依赖库，简称python-sdk 基础镜像
+dockerfile     为基础镜像+应用代码文件，简称应用镜像文件
+```
