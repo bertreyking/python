@@ -23,4 +23,5 @@ prettytable
 yaml
 os
 ```
-
+# generateyaml 是对 k8s 的 yaml 文件中字段进行清洗
+1. [参考连接](https://github.com/bertreyking/bertreyking.github.io/releases/tag/generateyaml-v4)
